@@ -1,3 +1,4 @@
+import { HeaderComponent } from './header/header.component';
 import { PostCreateComponent } from './Posts/Post-create/post-create.comoponent';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,7 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input'
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatToolbarModule} from '@angular/material/toolbar'
+import { PostListComponent } from './Posts/Post-list/post-list.component';
+import{MatExpansionModule} from '@angular/material/expansion'
 const modules = [
   //MatButtonModule,
   //MatFormFieldModule,
@@ -17,13 +20,17 @@ const modules = [
   FormsModule,
   BrowserAnimationsModule,
   MatCardModule,
-  MatButtonModule
+  MatButtonModule,
+  MatToolbarModule,
+  MatExpansionModule
 
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    PostCreateComponent
+    PostCreateComponent,
+    HeaderComponent,
+    PostListComponent
   ],
   imports: [...modules],
   providers: [],
